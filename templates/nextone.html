@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            padding: 0!important;
+            margin: 0!important;
+        }
+            @page {
+                size: letter landscape;
+                margin: 0mm;
+            }
+        .name{
+            direction: rtl;
+            position: absolute;
+    margin: 0 auto;
+    right: 310px;
+    top: 465px;
+            font-size: 22px;
+        }
+        img{
+            width: 1055px !important;
+            height: 815px !important;
+        }
+        </style>
+</head>
+<body id="element">
+<!--<body onload="window.print()">-->
+<h2 class="name">{{ object.name }}</h2>
+<img src="{% static 'page.jpg' %}" width="100" alt="">
+<script type="text/javascript" src="/static/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/static/html2canvas.min.js"></script>
+<script type="text/javascript" src="/static/canvas2image.js"></script>
+<!--<script>-->
+<!--    var elm = $('#element').get(0);-->
+<!--    var h = "7016";-->
+<!--    var w = "4960";-->
+<!--    var type = "png";-->
+<!--    var name = "mousa";-->
+<!--    html2canvas(elm).then(function(canvas){-->
+<!--        var canWidth = canvas.width;-->
+<!--        var canHeight = canvas.height;-->
+<!--        var img = Canvas2Image.convertToImage(canvas, canWidth, canHeight);-->
+<!--        $('#perview').after(img);-->
+<!--        Canvas2Image.saveAsImage(canvas, h, w, type, name);-->
+<!--    })-->
+<!--</script>-->
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            padding: 20px;
+            border: 5px solid black;
+        }
+        
+        h2 {
+            background: #efefef;
+            margin: 10px;
+        }
+        
+        .toPic {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2></h2>
+    <div style="background:red;width: 600px;" class="test">
+        <div style="background:green;">
+            <div style="background:blue;">
+                <div style="background:yellow;">
+                    <div style="background:orange;">
+                        33333333333333333333333333333333
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <h2 class="toCanvas"> <a href="javascript:void(0);"> 转成canvas </a></h2>
+    <h2 class="toPic"><a href="javascript:void(0);"> 转成图片 </a></h2>
+    <h5>
+        <label for="imgW">宽度:</label>
+        <input type="number" value="" id="imgW" placeholder="默认是原图宽度" />
+        <label for="imgH">高度:</label>
+        <input type="number" value="" id="imgH" placeholder="默认是原图高度" />
+        <label for="imgFileName">:</label>
+        <input type="text" placeholder="文件名" id="imgFileName" />
+        <select id="sel">
+                    <option value="png">png</option>
+                    <option value="jpeg">jpeg</option>
+                    <option value="bmp">bmp</option>
+                </select>
+        <button id="save">保存</button>
+    </h5>
+    <script type="text/javascript" src="/static/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/static/html2canvas.min.js"></script>
+    <script type="text/javascript" src="/static/canvas2image.js"></script>
+    <script type="text/javascript">
+        var test = $(".test").get(0);
+        $('body').click(function(e) {
+            html2canvas(test).then(function(canvas) {
+                var canvasWidth = canvas.width;
+                var canvasHeight = canvas.height;
+                $('.toCanvas').after(canvas);
+                $('.toPic').show(1000);
+                $('body').click(function(e) {
+                    var img = Canvas2Image.convertToImage(canvas, canvasWidth, canvasHeight);
+                    $(".toPic").after(img);
+                    $('body').click(function(e) {
+                        let type = $('#sel').val();
+                        let w = $('#imgW').val();
+                        let h = $('#imgH').val();
+                        let f = 'hi';
+                        w = (w === '') ? canvasWidth : 1000;
+                        h = (h === '') ? canvasHeight : 1000;
+                        Canvas2Image.saveAsImage(canvas, 1000, 1000, 0, f);
+                    });
+                });
+
+
+            });
+        });
+    </script>
+</body>
+
+</html>

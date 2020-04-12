@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar"><head>
+    <meta charset="UTF-8">
+     {% load staticfiles static %}
+    <link rel="stylesheet" href="/static/style.css">
+    <title>مبادرة الاجتياز الميسر | اطبع شهادتك</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style>
+        @font-face {
+            font-family: 'Tajawal';
+            font-style: normal;
+            font-weight: normal;
+            src: url('{% static "Tajawal-Regular.ttf" %}') format('woff');
+        }
+        body{
+            font-family: 'Tajawal',sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+<body>
+    <div class="container-fluid">
+		<div class="container">
+			<div class="formBox">
+                <div class="row">
+                <div class="col-sm-6"><img class="v-1" src="{% static 'image-2.jpg' %}" width="100" alt=""></div>
+                <div class="col-sm-6"><img  class="pull-left v-2" src="{% static 'image-1.jpg' %}" width="100" alt=""></div>
+                </div>
+				<form method="POST">
+                    {% csrf_token %}
+						<div class="row">
+							<div class="col-sm-12">
+								<h1>
+تتقدم الدكتورة / نوير مسري الحربي
+بخالص الشكر والتقدير للطالبات المشاركات
+في مبادرة الاجتياز الميسر FeT
+وتمنح لها هذه الشهادة شكراً وتقديراً
+
+يمكنك الآن كتابة اسمك وطباعة الشهادة</h1>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="inputBox ">
+									<div class="inputText">إسم الطالبة</div>
+									<input type="text" name="name" class="input">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="submit" name="" class="button" value="طباعة الشهادة">
+							</div>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</body></html>
+
+<!------ Include the above in your HEAD tag ---------->
+
