@@ -3,7 +3,7 @@ automium-web==0.1.1
 cairocffi==1.1.0
 CairoSVG==2.4.2
 cffi==1.14.0
-click==7.0
+click==7.1.1
 cssselect2==0.3.0
 defusedxml==0.6.0
 Django==2.2.12
@@ -21,7 +21,7 @@ PyPDF2==1.26.0
 Pyphen==0.9.5
 pytz==2019.3
 reportlab==3.5.42
-six==1.12.0
+six==1.14.0
 sqlparse==0.3.1
 tinycss2==1.0.2
 WeasyPrint==51
