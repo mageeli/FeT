@@ -14,3 +14,5 @@ urlpatterns = [
     url(r'^write/$', WriteView.as_view(success_url="/posts/"), name='write')
 ]+ staticfiles_urlpatterns()
 
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT),
