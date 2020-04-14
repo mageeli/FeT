@@ -88,7 +88,7 @@ class MyModelPrintView(WeasyTemplateResponseMixin, MyModelView):
 
 class MyModelDownloadView(WeasyTemplateResponseMixin, MyModelView):
     # suggested filename (is required for attachment/download!)
-    pdf_filename = 'foo.pdf'
+    pdf_filename = 'FeT.pdf'
 
 class MyModelImageView(WeasyTemplateResponseMixin, MyModelView):
     # generate a PNG image instead

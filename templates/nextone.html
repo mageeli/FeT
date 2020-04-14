@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style type="text/css">
+        @font-face {
+            font-family: 'Tajawal';
+            font-style: normal;
+            font-weight: normal;
+            src: url('{% static "Tajawal-Regular.ttf" %}') format('woff');
+        }
         body{
+            font-family: 'Tajawal',sans-serif !important;
             padding: 0!important;
             margin: 0!important;
         }
@@ -14,13 +21,13 @@
                 margin: 0mm;
             }
         .name{
+            font-family: 'Tajawal',sans-serif !important;
             direction: rtl;
             position: absolute;
             margin: 0 auto;
             right: 310px;
             top: 465px;
             font-size: 22px;
-            font-family: sans-serif;
         }
         img{
             width: 1055px !important;
