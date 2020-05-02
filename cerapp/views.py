@@ -96,4 +96,4 @@ class MyModelImageView(WeasyTemplateResponseMixin, MyModelView):
 
     # dynamically generate filename
     def get_pdf_filename(self):
-        return 'mousa.pdf'
+        return 'fet.pdf'
