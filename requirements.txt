@@ -6,7 +6,7 @@ cffi==1.14.0
 click==7.1.1
 cssselect2==0.3.0
 defusedxml==0.6.0
-Django==2.2.12
+Django==2.2.18
 django-weasyprint==0.5.5
 Flask==1.1.2
 gunicorn==20.0.4
